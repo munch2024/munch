@@ -35,7 +35,7 @@ def main():
 
     # ! Must remember to uncomment tokens before running
     # !     and to comment tokens before pushing
-    lstTokens = [""] # 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
+    lstTokens = [""] # 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
     
     file = repo.split('/')[1]
 

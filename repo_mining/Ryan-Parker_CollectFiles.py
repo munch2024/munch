@@ -82,7 +82,7 @@ def main():
     # Remember to empty the list when going to commit to GitHub.
     # Otherwise they will all be reverted and you will have to re-create them
     # I would advise to create more than one token for repos with heavy commits
-    lstTokens = ["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"] # 
+    lstTokens = [""] # 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
 
 
     # TODO: This is to get the dictionary of files, but we need the dictionary
