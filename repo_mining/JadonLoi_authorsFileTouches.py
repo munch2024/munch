@@ -32,14 +32,15 @@ def github_auth(url, lsttoken, ct):
 def countfiles(dictfiles, lsttokens, repo, touched_files):
     ipage = 1  # url page counter
     ct = 0  # token counter
-
+    
+    files_ext = set()
     try:
         # loop though all the commit pages until the last returned empty page
         while True:
             spage = str(ipage)
             commitsUrl = 'https://api.github.com/repos/' + repo + '/commits?page=' + spage + '&per_page=100'
             jsonCommits, ct = github_auth(commitsUrl, lsttokens, ct)
-
+    
             # break out of the while loop if there are no more commits in the pages
             if len(jsonCommits) == 0:
                 break
@@ -51,7 +52,6 @@ def countfiles(dictfiles, lsttokens, repo, touched_files):
                 shaDetails, ct = github_auth(shaUrl, lsttokens, ct)
 
                 filesjson = shaDetails['files']
-
                 name = shaDetails['commit']['author']['name']
                 date = shaDetails['commit']['author']['date']
 
@@ -60,6 +60,11 @@ def countfiles(dictfiles, lsttokens, repo, touched_files):
                             "css", "scss", "js"]
                 for filenameObj in filesjson:
                     filename = filenameObj['filename']
+                    print(filename)
+                    if ('.' in filename):
+                        ext = filename.split('.')[1]
+                        if ext not in files_ext:
+                            files_ext.add(ext)
 
                     for ext in file_ext:
                         if filename.endswith(ext):
@@ -70,7 +75,8 @@ def countfiles(dictfiles, lsttokens, repo, touched_files):
     except Exception as e:
         print("Error receiving data")
         exit(0)
-
+    
+    print(files_ext)
 def getProcessedData():
     return touched_files
 
