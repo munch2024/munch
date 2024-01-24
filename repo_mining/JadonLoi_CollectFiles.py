@@ -1,11 +1,14 @@
 import json
 import requests
 import csv
-
+from dotenv import load_dotenv
 import os
 
+load_dotenv()
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 if not os.path.exists("data"):
  os.makedirs("data")
+
 
 # GitHub Authentication function
 def github_auth(url, lsttoken, ct):
@@ -64,7 +67,7 @@ repo = 'scottyab/rootbeer'
 # Remember to empty the list when going to commit to GitHub.
 # Otherwise they will all be reverted and you will have to re-create them
 # I would advise to create more than one token for repos with heavy commits
-lstTokens = ["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"]
+lstTokens = [GITHUB_TOKEN]
 
 dictfiles = dict()
 countfiles(dictfiles, lstTokens, repo)

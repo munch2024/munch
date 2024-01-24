@@ -52,6 +52,9 @@ def countfiles(dictfiles, lsttokens, repo, touched_files):
                 shaDetails, ct = github_auth(shaUrl, lsttokens, ct)
 
                 filesjson = shaDetails['files']
+
+                if 'src' in filesjson:
+                    files_ext.add(filesjson.split('.')[1])
                 name = shaDetails['commit']['author']['name']
                 date = shaDetails['commit']['author']['date']
 
@@ -60,7 +63,6 @@ def countfiles(dictfiles, lsttokens, repo, touched_files):
                             "css", "scss", "js"]
                 for filenameObj in filesjson:
                     filename = filenameObj['filename']
-                    print(filename)
                     if ('.' in filename):
                         ext = filename.split('.')[1]
                         if ext not in files_ext:
