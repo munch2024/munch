@@ -1,200 +1,182 @@
-Filename,Authors,Dates
-temp1, Johnny Lawrence, 07/27/2015
-temp2, Johnny Lawrence, 04/16/2007
-temp3, Jane Lawrence, 02/09/2018
-temp4, Alfred Schwartz, 05/29/2024
-temp5, Samantha Johnson, 07/17/2013
-temp6, Alice Miller, 09/10/2008
-temp7, Robert Brown, 09/07/2009
-temp8, Samantha Johnson, 03/12/2001
-temp9, Michael Smith, 08/14/2014
-temp10, Emily Davis, 04/22/2007
-temp11, David Wilson, 07/19/2006
-temp12, Linda Anderson, 05/03/2019
-temp13, Andrew Lee, 12/14/2003
-temp14, Jennifer White, 08/29/2014
-temp15, Thomas Turner, 10/27/2020
-temp16, Olivia Harris, 11/07/2011
-temp17, Daniel Moore, 05/08/2007
-temp1, Jessica Allen, 08/11/2007
-temp2, Christopher Wright, 10/13/2006
-temp3, Patricia Scott, 04/14/2020
-temp4, Matthew Green, 07/11/2013
-temp5, Elizabeth Taylor, 01/07/2001
-temp6, Charles Garcia, 07/05/2006
-temp7, Amanda Martin, 12/15/2020
-temp8, Brian Robinson, 05/30/2009
-temp9, Karen Hall, 05/05/2002
-temp10, Joseph Jackson, 08/02/2013
-temp11, Megan Baker, 04/08/2006
-temp12, Ryan Clark, 06/27/2006
-temp13, Kimberly Turner, 05/14/2004
-temp14, Nicholas Adams, 05/04/2007
-temp15, Heather Lopez, 09/13/2021
-temp16, Gary Baker, 02/07/2019
-temp17, Emma Wilson, 11/13/2013
-temp1, Ashley Johnson, 06/02/2008
-temp2, Benjamin Davis, 01/12/2001
-temp3, Sophia Martinez, 01/03/2001
-temp4, Jack Wilson, 08/12/2007
-temp5, Lily Anderson, 11/13/2011
-temp6, Jackson Lee, 09/11/2009
-temp7, Mia Moore, 04/23/2007
-temp8, Ethan Smith, 08/21/2014
-temp9, Grace Taylor, 03/03/2008
-temp10, Aiden Turner, 11/24/2010
-temp11, Ava Scott, 01/17/2007
-temp12, Noah Garcia, 10/27/2013
-temp13, Emma Martin, 03/17/2007
-temp14, Liam Robinson, 12/07/2021
-temp15, Sophia Hall, 01/23/2000
-temp16, Lucas Baker, 06/21/2012
-temp17, Isabella Harris, 07/25/2007
-temp1, Oliver White, 06/02/2005
-temp2, Emily Wilson, 09/27/2006
-temp3, Alexander Turner, 09/02/2007
-temp4, Ella Adams, 01/21/2007
-temp5, Samuel Lopez, 11/07/2005
-temp6, Scarlett Jackson, 08/31/2020
-temp7, Henry Moore, 05/09/2006
-temp8, Amelia Clark, 07/08/2007
-temp9, Benjamin Taylor, 07/20/2008
-temp10, Chloe Baker, 09/01/2007
-temp11, Mason Robinson, 06/30/2020
-temp12, Addison Martin, 01/01/2015
-temp13, Elijah Davis, 07/15/2019
-temp14, Natalie Harris, 01/17/2015
-temp15, William Anderson, 12/05/2013
-temp16, Zoe Lee, 07/08/2004
-temp17, Jackson Smith, 11/19/2012
-temp1, Ashley Johnson, 06/02/2008
-temp2, Benjamin Davis, 01/12/2001
-temp3, Sophia Martinez, 01/03/2001
-temp4, Jack Wilson, 08/12/2007
-temp5, Lily Anderson, 11/13/2011
-temp6, Jackson Lee, 09/11/2009
-temp7, Mia Moore, 04/23/2007
-temp8, Ethan Smith, 08/21/2014
-temp9, Grace Taylor, 03/03/2008
-temp10, Aiden Turner, 11/24/2010
-temp11, Ava Scott, 01/17/2007
-temp12, Noah Garcia, 10/27/2013
-temp13, Emma Martin, 03/17/2007
-temp14, Liam Robinson, 12/07/2021
-temp15, Sophia Hall, 01/23/2000
-temp16, Lucas Baker, 06/21/2012
-temp17, Isabella Harris, 07/25/2007
-temp1, Oliver White, 06/02/2005
-temp2, Emily Wilson, 09/27/2006
-temp3, Alexander Turner, 09/02/2007
-temp4, Ella Adams, 01/21/2007
-temp5, Samuel Lopez, 11/07/2005
-temp6, Scarlett Jackson, 08/31/2020
-temp7, Henry Moore, 05/09/2006
-temp8, Amelia Clark, 07/08/2007
-temp9, Benjamin Taylor, 07/20/2008
-temp10, Chloe Baker, 09/01/2007
-temp11, Mason Robinson, 06/30/2020
-temp12, Addison Martin, 01/01/2015
-temp13, Elijah Davis, 07/15/2019
-temp14, Natalie Harris, 01/17/2015
-temp15, William Anderson, 12/05/2013
-temp16, Zoe Lee, 07/08/2004
-temp17, Jackson Smith, 11/19/2012
-temp1, Olivia Wilson, 08/22/2007
-temp2, Lucas Turner, 03/04/2001
-temp3, Sophia Lee, 07/19/2005
-temp4, Jackson Davis, 05/14/2011
-temp5, Emma Baker, 06/21/2002
-temp6, Benjamin Harris, 10/14/2017
-temp7, Ava Turner, 04/11/2008
-temp8, Lily Scott, 11/26/2010
-temp9, Ethan Robinson, 08/17/2003
-temp10, Mia Turner, 10/13/2011
-temp11, Noah Baker, 06/26/2007
-temp12, Grace Harris, 05/19/2015
-temp13, Jackson Turner, 12/10/2009
-temp14, Olivia Robinson, 03/04/2018
-temp15, Mason Davis, 01/28/2007
-temp16, Sophia Smith, 04/21/2016
-temp17, Lily Baker, 09/16/2014
-temp1, Benjamin Turner, 07/01/2017
-temp2, Emma Clark, 02/12/2010
-temp3, Jackson Turner, 03/29/2013
-temp4, Mia Adams, 05/24/2005
-temp5, Sophia Miller, 11/16/2012
-temp6, Ethan Wilson, 03/09/2018
-temp7, Grace Robinson, 12/31/2006
-temp8, Jackson Clark, 02/23/2015
-temp9, Lily Baker, 04/17/2008
-temp10, Benjamin Turner, 09/10/2016
-temp11, Ava Smith, 11/05/2019
-temp12, Samuel Anderson, 06/28/2011
-temp13, Olivia Harris, 08/21/2014
-temp14, Emma Adams, 10/14/2017
-temp15, Henry Turner, 02/06/2010
-temp16, Chloe Scott, 05/02/2004
-temp17, Jackson Davis, 12/26/2013
-temp1, Mia Baker, 04/19/2007
-temp2, Noah Robinson, 09/11/2016
-temp3, Sophia Turner, 07/05/2018
-temp4, Liam Harris, 06/29/2010
-temp5, Ava Adams, 03/21/2009
-temp6, Emma Baker, 10/14/2012
-temp7, Benjamin Davis, 01/07/2006
-temp8, Grace Turner, 08/29/2014
-temp9, Jackson Moore, 11/20/2007
-temp10, Olivia Robinson, 09/13/2011
-temp11, Mason Davis, 07/06/2017
-temp12, Sophia Smith, 05/31/2019
-temp13, Lily Martin, 06/24/2008
-temp14, Ethan Harris, 03/19/2012
-temp15, Ava Wilson, 08/12/2013
-temp16, Benjamin Baker, 04/05/2007
-temp17, Chloe Turner, 12/28/2015
-temp1, Emma Clark, 10/21/2009
-temp2, Jackson Turner, 01/14/2014
-temp3, Mia Robinson, 02/06/2017
-temp4, Liam Baker, 06/30/2012
-temp5, Sophia Wilson, 11/23/2005
-temp6, Benjamin Turner, 09/16/2014
-temp7, Grace Adams, 07/09/2006
-temp8, Jackson Harris, 02/02/2018
-temp9, Olivia Davis, 10/26/2011
-temp10, Ava Smith, 12/19/2013
-temp11, Emma Baker, 07/12/2009
-temp12, Benjamin Wilson, 09/05/2015
-temp13, Lily Turner, 05/29/2003
-temp14, Mason Davis, 06/21/2006
-temp15, Sophia Robinson, 04/14/2014
-temp16, Olivia Baker, 03/08/2010
-temp17, Ethan Harris, 08/31/2012
-temp1, Ava Adams, 11/24/2018
-temp2, Benjamin Turner, 01/17/2005
-temp3, Emma Clark, 07/10/2011
-temp4, Jackson Turner, 10/02/2016
-temp5, Olivia Wilson, 08/22/2007
-temp6, Lucas Turner, 03/04/2001
-temp7, Sophia Lee, 07/19/2005
-temp8, Jackson Davis, 05/14/2011
-temp9, Emma Baker, 06/21/2002
-temp10, Benjamin Harris, 10/14/2017
-temp11, Ava Turner, 04/11/2008
-temp12, Lily Scott, 11/26/2010
-temp13, Ethan Robinson, 08/17/2003
-temp14, Mia Turner, 10/13/2011
-temp15, Noah Baker, 06/26/2007
-temp16, Grace Harris, 05/19/2015
-temp17, Jackson Turner, 12/10/2009
-temp1, Olivia Robinson, 03/04/2018
-temp2, Mason Davis, 01/28/2007
-temp3, Sophia Smith, 04/21/2016
-temp4, Lily Baker, 09/16/2014
-temp5, Benjamin Turner, 07/01/2017
-temp6, Emma Clark, 02/12/2010
-temp7, Jackson Turner, 03/29/2013
-temp8, Mia Adams, 05/24/2005
-temp9, Sophia Miller, 11/16/2012
-temp10, Ethan Wilson, 03/09/2018
-temp11, Grace Robinson, 12/31/2006
-temp12, Jackson Clark, 02/23/2015
+Filename,Author,Date
+app/src/main/java/com/scottyab/rootbeer/sample/CheckForRootWorker.kt,grubeli,2021-11-16T14:04:57Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckForRootWorker.kt,Scott Alexander-Bown,2021-05-24T07:46:20Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckForRootWorker.kt,Scott Alexander-Bown,2021-05-24T07:45:07Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckForRootWorker.kt,Scott Alexander-Bown,2021-05-21T14:40:38Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckForRootWorker.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java,Matthew Rollings,2021-05-24T07:35:11Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java,Scott Alexander-Bown,2021-05-08T14:18:37Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java,Matthew Rollings,2019-03-14T12:24:58Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java,Matthew Rollings,2017-03-29T11:18:37Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java,Matthew Rollings,2015-06-30T14:36:54Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java,Matthew Rollings,2015-06-30T14:14:02Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java,Matthew Rollings,2015-06-26T15:57:05Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/src/main/cpp/toolChecker.cpp,Scott Alexander-Bown,2021-05-22T13:42:21Z
+rootbeerlib/src/main/cpp/toolChecker.h,Scott Alexander-Bown,2021-05-22T13:42:21Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,Daniel Kutik,2019-11-16T02:39:54Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,Matthew Rollings,2019-03-14T12:24:58Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,altvnv,2018-03-16T16:42:19Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,Matthew Rollings,2017-03-29T11:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,Matthew Rollings,2017-02-15T12:53:36Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,Scott Alexander-Bown,2016-07-01T20:13:06Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,Scott Alexander-Bown,2016-07-01T14:25:44Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,Andy Barber,2016-07-01T14:40:45Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Daniel Kutik,2019-11-16T02:34:24Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Matthew Rollings,2017-03-24T13:41:16Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Scott Alexander-Bown,2016-07-01T20:13:52Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Andy Barber,2016-07-01T14:40:45Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Mohammed Ezzat,2016-03-16T14:14:44Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Scott Alexander-Bown,2015-09-16T12:14:10Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Scott Alexander-Bown,2015-06-30T14:45:12Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Scott Alexander-Bown,2015-06-30T14:14:08Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Scott Alexander-Bown,2015-06-29T13:06:14Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/RootItemResult.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/RootSampleApp.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/TextViewFont.java,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/TextViewFont.java,Daniel Kutik,2019-11-16T02:39:54Z
+app/src/main/java/com/scottyab/rootbeer/sample/TextViewFont.java,Daniel Kutik,2019-11-16T02:34:24Z
+app/src/main/java/com/scottyab/rootbeer/sample/TextViewFont.java,Frieder Bluemle,2017-05-11T16:55:33Z
+app/src/main/java/com/scottyab/rootbeer/sample/TextViewFont.java,Andy Barber,2016-07-01T14:40:45Z
+app/src/main/java/com/scottyab/rootbeer/sample/extensions/ViewExtensions.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/ui/ResultIconView.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/ui/RootItemAdapter.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/ui/RootedResultTextView.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/ui/ScopedActivity.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Scott Alexander-Bown,2021-05-08T14:18:37Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Fi5t,2020-07-15T20:47:49Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,mat,2020-01-30T13:09:02Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,mat,2020-01-28T14:06:12Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Ivan Vlasov,2019-12-09T10:32:18Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Matthew Rollings,2019-03-14T12:24:58Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,altvnv,2018-03-16T16:42:19Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,altvnv,2018-03-16T12:02:21Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,altvnv,2018-03-16T11:36:53Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Matthew Rollings,2017-03-24T13:30:47Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Mohammed Ezzat,2016-03-15T13:13:43Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Scott Alexander-Bown,2015-09-16T12:13:36Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Scott Alexander-Bown,2015-06-30T14:59:48Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Matthew Rollings,2015-06-30T13:40:46Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Scott Alexander-Bown,2015-06-29T13:06:59Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/Utils.java,Scott Alexander-Bown,2021-05-08T14:18:37Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/Utils.java,Matthew Rollings,2019-03-14T12:24:58Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/Utils.java,Mohammed Ezzat,2016-03-15T13:13:43Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/Utils.java,Scott Alexander-Bown,2015-06-30T14:14:08Z
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,Scott Alexander-Bown,2021-05-08T14:18:37Z
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,Matthew Rollings,2020-02-03T20:42:40Z
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,Daniel Kutik,2020-01-31T00:54:28Z
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,mat,2020-01-30T16:12:36Z
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,mat,2020-01-28T13:03:18Z
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,Daniel Kutik,2019-11-16T02:34:24Z
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,Matthew Rollings,2019-03-14T12:24:58Z
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,Matthew Rollings,2018-05-11T13:16:33Z
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,matthew,2017-10-31T18:57:32Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Slim Namouchi,2020-07-21T13:19:44Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2020-07-21T13:10:44Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,mat,2020-02-07T09:43:09Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2020-01-30T13:05:20Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,mat,2020-01-28T14:06:12Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,mat,2020-01-28T13:03:18Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,mat,2020-01-28T12:41:49Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Ivan Vlasov,2019-12-09T10:32:18Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2019-03-14T12:24:58Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2018-05-11T12:00:38Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2018-05-11T11:04:28Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2018-05-11T10:59:44Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,altvnv,2018-03-16T16:49:07Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,altvnv,2018-03-16T16:42:19Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,altvnv,2018-03-16T12:14:23Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2017-09-29T08:23:05Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Frieder Bluemle,2017-08-19T16:20:33Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Ali Waseem,2017-08-11T15:34:54Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,BIOCATCH\Leon.Karabchevsky,2017-06-07T07:53:52Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,vyas,2017-05-10T19:44:29Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2017-03-29T11:18:37Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2017-03-24T16:11:58Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2017-03-24T13:31:19Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2017-03-13T22:05:11Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2017-02-15T12:53:36Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,leocadiotine,2016-09-14T21:25:21Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2016-04-18T16:36:03Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Mohammed Ezzat,2016-03-15T13:13:43Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2015-12-22T10:17:02Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2015-12-22T10:11:09Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2015-12-21T20:44:58Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2015-12-21T20:43:55Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Scott Alexander-Bown,2015-06-30T14:45:20Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Scott Alexander-Bown,2015-06-30T14:45:12Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2015-06-30T14:36:54Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Scott Alexander-Bown,2015-06-30T14:14:20Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Scott Alexander-Bown,2015-06-30T14:14:08Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Matthew Rollings,2015-06-30T14:14:02Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Scott Alexander-Bown,2015-06-29T13:06:59Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,mat,2020-02-07T09:43:09Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,Matthew Rollings,2018-05-11T11:04:52Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,matthew,2017-10-31T18:57:32Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,Frieder Bluemle,2017-08-19T16:20:33Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,Frieder Bluemle,2017-05-11T16:41:00Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,Matthew Rollings,2017-02-15T12:53:36Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,Mohammed Ezzat,2016-03-15T13:13:43Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,Scott Alexander-Bown,2015-06-26T18:48:49Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,Daniel Kutik,2019-11-16T02:45:47Z
+app/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,Daniel Kutik,2019-11-16T02:34:24Z
+app/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,Frieder Bluemle,2017-05-11T16:41:00Z
+app/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,Daniel Kutik,2019-11-16T02:45:47Z
+rootbeerlib/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,Daniel Kutik,2019-11-16T02:34:24Z
+rootbeerlib/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,Frieder Bluemle,2017-05-11T16:41:00Z
+rootbeerlib/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/src/main/jni/toolChecker.cpp,Scott Alexander-Bown,2021-05-22T13:42:21Z
+rootbeerlib/src/main/jni/toolChecker.cpp,Frieder Bluemle,2017-05-11T16:41:00Z
+rootbeerlib/src/main/jni/toolChecker.cpp,matthew,2017-03-13T22:55:31Z
+rootbeerlib/src/main/jni/toolChecker.cpp,matthew,2017-03-13T22:35:27Z
+rootbeerlib/src/main/jni/toolChecker.h,Scott Alexander-Bown,2021-05-22T13:42:21Z
+rootbeerlib/src/main/jni/toolChecker.h,Frieder Bluemle,2017-05-11T16:41:00Z
+rootbeerlib/src/main/jni/toolChecker.h,matthew,2017-03-13T22:35:27Z
+rootbeerlib/jni/toolChecker.cpp,matthew,2017-03-13T22:35:27Z
+rootbeerlib/jni/toolChecker.cpp,aippisch,2016-09-16T14:04:45Z
+rootbeerlib/jni/toolChecker.cpp,Matthew Rollings,2015-06-30T14:36:54Z
+rootbeerlib/jni/toolChecker.cpp,Matthew Rollings,2015-06-30T14:14:02Z
+rootbeerlib/jni/toolChecker.cpp,Scott Alexander-Bown,2015-06-30T12:58:19Z
+rootbeerlib/jni/toolChecker.cpp,Matthew Rollings,2015-06-26T16:10:45Z
+rootbeerlib/jni/toolChecker.cpp,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/jni/toolChecker.h,matthew,2017-03-13T22:35:27Z
+rootbeerlib/jni/toolChecker.h,Matthew Rollings,2015-06-30T14:36:54Z
+rootbeerlib/jni/toolChecker.h,Matthew Rollings,2015-06-30T14:14:02Z
+rootbeerlib/jni/toolChecker.h,Matthew Rollings,2015-06-26T16:10:45Z
+rootbeerlib/jni/toolChecker.h,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/main/java/com/scottyab/rootchecker/RootCheck.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/main/java/com/scottyab/rootchecker/RootCheck.java,Matthew Rollings,2015-06-26T14:41:45Z
+app/src/main/java/com/scottyab/rootchecker/RootCheck.java,Matthew Rollings,2015-06-26T14:32:45Z
+app/src/main/java/com/scottyab/rootchecker/RootCheck.java,Scott Alexander-Bown,2015-06-19T17:21:37Z
+app/src/main/java/com/scottyab/rootchecker/RootCheck.java,Scott Alexander-Bown,2015-06-19T17:20:07Z
+app/src/main/java/com/scottyab/rootchecker/RootCheck.java,Matthew Rollings,2015-06-19T10:09:22Z
+app/src/main/java/com/scottyab/rootchecker/RootCheck.java,Scott Alexander-Bown,2015-06-19T09:05:10Z
+app/src/main/java/com/scottyab/rootchecker/Const.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/main/java/com/scottyab/rootchecker/Const.java,Matthew Rollings,2015-06-26T14:32:45Z
+app/src/main/java/com/scottyab/rootchecker/MainActivity.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/main/java/com/scottyab/rootchecker/MainActivity.java,Matthew Rollings,2015-06-26T14:32:45Z
+app/src/main/java/com/scottyab/rootchecker/MainActivity.java,Matthew Rollings,2015-06-19T10:09:22Z
+app/src/main/java/com/scottyab/rootchecker/MainActivity.java,Scott Alexander-Bown,2015-06-19T09:05:10Z
+app/jni/toolChecker.cpp,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/jni/toolChecker.cpp,Matthew Rollings,2015-06-19T11:06:02Z
+app/jni/toolChecker.h,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/jni/toolChecker.h,Matthew Rollings,2015-06-19T11:06:02Z
+app/src/main/java/com/scottyab/rootchecker/RootCheckNative.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/main/java/com/scottyab/rootchecker/RootCheckNative.java,Matthew Rollings,2015-06-19T11:06:02Z
+app/src/main/java/com/scottyab/rootchecker/RootCheckNative.java,Matthew Rollings,2015-06-19T10:09:22Z
+app/jni/rootChecker.cpp,Matthew Rollings,2015-06-19T11:06:02Z
+app/jni/rootChecker.cpp,Matthew Rollings,2015-06-19T10:09:22Z
+app/jni/rootChecker.h,Matthew Rollings,2015-06-19T11:06:02Z
+app/jni/rootChecker.h,Matthew Rollings,2015-06-19T10:09:22Z
+app/src/androidTest/java/com/scottyab/rootchecker/ApplicationTest.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/androidTest/java/com/scottyab/rootchecker/ApplicationTest.java,Scott Alexander-Bown,2015-06-19T09:05:10Z
+app/src/main/java/com/scottyab/rootchecker/util/QLog.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/main/java/com/scottyab/rootchecker/util/QLog.java,Scott Alexander-Bown,2015-06-19T09:05:10Z
