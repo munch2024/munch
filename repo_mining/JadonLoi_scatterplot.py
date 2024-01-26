@@ -16,4 +16,6 @@ for i, (file, commits) in enumerate(data.items()):
         colors.append(ord(author[0]) - ord('a'))
 
 plt.scatter(x,y,s=10, c=colors)
+plt.ylabel("Weeks")
+plt.xlabel("Files")
 plt.show()
