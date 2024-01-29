@@ -1,14 +1,11 @@
 import json
 import requests
 import csv
-from dotenv import load_dotenv
+
 import os
 
-load_dotenv()
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 if not os.path.exists("data"):
  os.makedirs("data")
-
 
 # GitHub Authentication function
 def github_auth(url, lsttoken, ct):
@@ -32,6 +29,13 @@ def countfiles(dictfiles, lsttokens, repo):
     ct = 0  # token counter
 
     try:
+        file = repo.split('/')[1]
+        # change this to the path of your file
+        fileOutput = 'data/file_touches_' + file + '.csv'
+        rows = ["Filename", "Author", "Timestamp"]
+        fileCSV = open(fileOutput, 'w')
+        writer = csv.writer(fileCSV)
+        writer.writerow(rows)
         # loop though all the commit pages until the last returned empty page
         while True:
             spage = str(ipage)
@@ -44,14 +48,27 @@ def countfiles(dictfiles, lsttokens, repo):
             # iterate through the list of commits in  spage
             for shaObject in jsonCommits:
                 sha = shaObject['sha']
+                author = shaObject['commit']['author']['name']
+                timestamp = shaObject['commit']['author']['date']
                 # For each commit, use the GitHub commit API to extract the files touched by the commit
                 shaUrl = 'https://api.github.com/repos/' + repo + '/commits/' + sha
                 shaDetails, ct = github_auth(shaUrl, lsttokens, ct)
                 filesjson = shaDetails['files']
                 for filenameObj in filesjson:
                     filename = filenameObj['filename']
-                    dictfiles[filename] = dictfiles.get(filename, 0) + 1
-                    print(filename)
+                    if filename.endswith(('.c', '.cpp', '.java', '.kt', '.h')):
+                        if filename not in dictfiles:
+                            dictfiles[filename] = {'touches': 1, 'authors': {author}, 'timestamps': {timestamp}}
+                            print(f"File: {filename}, Author: {author}, Timestamp: {timestamp}")
+                            rows = [filename, author, timestamp]
+                            writer.writerow(rows)
+                        else:
+                            dictfiles[filename]['touches'] += 1
+                            dictfiles[filename]['authors'].add(author)
+                            dictfiles[filename]['timestamps'].add(timestamp)
+                            print(f"File: {filename}, Author: {author}, Timestamp: {timestamp}")
+                            rows = [filename, author, timestamp]
+                            writer.writerow(rows)
             ipage += 1
     except:
         print("Error receiving data")
@@ -67,7 +84,7 @@ repo = 'scottyab/rootbeer'
 # Remember to empty the list when going to commit to GitHub.
 # Otherwise they will all be reverted and you will have to re-create them
 # I would advise to create more than one token for repos with heavy commits
-lstTokens = [GITHUB_TOKEN]
+lstTokens = [""]
 
 dictfiles = dict()
 countfiles(dictfiles, lstTokens, repo)
@@ -75,19 +92,13 @@ print('Total number of files: ' + str(len(dictfiles)))
 
 file = repo.split('/')[1]
 # change this to the path of your file
-fileOutput = 'data/file_' + file + '.csv'
-rows = ["Filename", "Touches"]
-fileCSV = open(fileOutput, 'w')
-writer = csv.writer(fileCSV)
-writer.writerow(rows)
+fileOutput = 'data/file_touches_' + file + '.csv'
 
 bigcount = None
 bigfilename = None
-for filename, count in dictfiles.items():
-    rows = [filename, count]
-    writer.writerow(rows)
-    if bigcount is None or count > bigcount:
-        bigcount = count
+for filename, data in dictfiles.items():
+    if bigcount is None or data['touches'] > bigcount:
+        bigcount = data['touches']
         bigfilename = filename
-fileCSV.close()
+
 print('The file ' + bigfilename + ' has been touched ' + str(bigcount) + ' times.')
