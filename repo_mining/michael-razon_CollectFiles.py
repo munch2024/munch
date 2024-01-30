@@ -1,11 +1,11 @@
 import json
 import requests
 import csv
+
 import os
-import pathlib
 
 if not os.path.exists("data"):
-    os.makedirs("data")
+ os.makedirs("data")
 
 # GitHub Authentication function
 def github_auth(url, lsttoken, ct):
@@ -27,7 +27,8 @@ def github_auth(url, lsttoken, ct):
 def countfiles(dictfiles, lsttokens, repo):
     ipage = 1  # url page counter
     ct = 0  # token counter
-
+    directoryList = []                                      # modification: list of components of the file name
+    acceptedExtensions = ["cpp", "h", "java", "kt"]         # modification: list of source file extensions
     try:
         # loop though all the commit pages until the last returned empty page
         while True:
@@ -44,16 +45,15 @@ def countfiles(dictfiles, lsttokens, repo):
                 # For each commit, use the GitHub commit API to extract the files touched by the commit
                 shaUrl = 'https://api.github.com/repos/' + repo + '/commits/' + sha
                 shaDetails, ct = github_auth(shaUrl, lsttokens, ct)
-                author = shaDetails['commit']['author']['name']
-                date = shaDetails['commit']['author']['date']
                 filesjson = shaDetails['files']
-
                 for filenameObj in filesjson:
-                    filename = filenameObj['filename']
-                    fileType = pathlib.Path(filename).suffix
-                    # check if in the repoLangs 
-                    if(fileType in [ ".cpp", ".java", ".kt", ".h"]):   
-                        dictfiles.setdefault(filename, []).append({'author': author, 'date': date})
+                    filename = filenameObj['filename']      
+                    directoryList = filename.split('/')                                 # modification: split file name by /
+                    fileExtension = directoryList[(len(directoryList) - 1)].split('.')  # modification: get file extension
+                    if len(fileExtension) > 1:                                          # modification: if there is a file extension, get it
+                        fileExtension = fileExtension[1]
+                    if fileExtension in acceptedExtensions:                             # modification: if source file, then continue
+                        dictfiles[filename] = dictfiles.get(filename, 0) + 1
                         print(filename)
             ipage += 1
     except:
@@ -61,13 +61,16 @@ def countfiles(dictfiles, lsttokens, repo):
         exit(0)
 # GitHub repo
 repo = 'scottyab/rootbeer'
+# repo = 'Skyscanner/backpack' # This repo is commit heavy. It takes long to finish executing
+# repo = 'k9mail/k-9' # This repo is commit heavy. It takes long to finish executing
+# repo = 'mendhak/gpslogger'
 
 
 # put your tokens here
 # Remember to empty the list when going to commit to GitHub.
 # Otherwise they will all be reverted and you will have to re-create them
 # I would advise to create more than one token for repos with heavy commits
-lstTokens = [""]
+lstTokens = ["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"]
 
 dictfiles = dict()
 countfiles(dictfiles, lstTokens, repo)
@@ -75,15 +78,19 @@ print('Total number of files: ' + str(len(dictfiles)))
 
 file = repo.split('/')[1]
 # change this to the path of your file
-fileOutput = 'data/author_' + file + '.csv'
-rows = ["Filename", "Author", "Date"]
+fileOutput = 'data/file_' + file + '.csv'
+rows = ["Filename", "Touches"]
 fileCSV = open(fileOutput, 'w')
 writer = csv.writer(fileCSV)
 writer.writerow(rows)
 
-for filename, touches in dictfiles.items():
-    for touch in touches:
-        rows = [filename, touch['author'], touch['date']]
-        writer.writerow(rows)
-
+bigcount = None
+bigfilename = None
+for filename, count in dictfiles.items():
+    rows = [filename, count]
+    writer.writerow(rows)
+    if bigcount is None or count > bigcount:
+        bigcount = count
+        bigfilename = filename
 fileCSV.close()
+print('The file ' + bigfilename + ' has been touched ' + str(bigcount) + ' times.')
