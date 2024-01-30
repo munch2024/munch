@@ -28,6 +28,7 @@ def countfiles(dictfiles, lsttokens, repo):
     ipage = 1  # url page counter
     ct = 0  # token counter
     directoryList = []                                      # modification: list of components of the file name
+    acceptedExtensions = ["cpp", "h", "java", "kt"]         # modification: list of source file extensions
     try:
         # loop though all the commit pages until the last returned empty page
         while True:
@@ -46,13 +47,12 @@ def countfiles(dictfiles, lsttokens, repo):
                 shaDetails, ct = github_auth(shaUrl, lsttokens, ct)
                 filesjson = shaDetails['files']
                 for filenameObj in filesjson:
-                    isSrc = False                           # modification: flag for if it is a src file
                     filename = filenameObj['filename']      
-                    directoryList = filename.split('/')     # modification: split file name by /
-                    for i in directoryList:                 # modification: iterate through list of file name components
-                        if i == "src":                      # modification: if a component is 'src': 
-                            isSrc = True                    # modification:     it is a source file
-                    if isSrc == True:                       # modification: if it was source file, then proceede with original code
+                    directoryList = filename.split('/')                                 # modification: split file name by /
+                    fileExtension = directoryList[(len(directoryList) - 1)].split('.')  # modification: get file extension
+                    if len(fileExtension) > 1:                                          # modification: if there is a file extension, get it
+                        fileExtension = fileExtension[1]
+                    if fileExtension in acceptedExtensions:                             # modification: if source file, then continue
                         dictfiles[filename] = dictfiles.get(filename, 0) + 1
                         print(filename)
             ipage += 1
@@ -70,7 +70,7 @@ repo = 'scottyab/rootbeer'
 # Remember to empty the list when going to commit to GitHub.
 # Otherwise they will all be reverted and you will have to re-create them
 # I would advise to create more than one token for repos with heavy commits
-lstTokens = ["FAKETOKEN_0000"]
+lstTokens = ["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"]
 
 dictfiles = dict()
 countfiles(dictfiles, lstTokens, repo)
