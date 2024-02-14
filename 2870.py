@@ -1,14 +1,23 @@
 from typing import List
-from collections import defaultdict
+import math
 
 
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        frequency = defaultdict(int)
+        # Step 1: Count the frequency of each unique element
+        frequency = {}
         for num in nums:
-            frequency[num] = 1 + frequency.get(num, 0)
+            frequency[num] = frequency.get(num, 0) + 1
 
-        if sum(frequency.values()) % 3 != 0:
+        # Step 2: Check if there is any element with a count of 1
+        if any(count == 1 for count in frequency.values()):
             return -1
 
-        return sum(frequency.values()) // 3
+        # Step 3: Calculate minimum steps for each unique element
+        total_steps = sum(math.ceil(count / 3) for count in frequency.values())
+
+        # Handle the special case where the array length is 2
+        if len(nums) == 2 and nums[0] == nums[1]:
+            return 1
+
+        return total_steps
