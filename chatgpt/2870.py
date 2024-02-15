@@ -22,7 +22,7 @@ class Solution:
             frequency[num] = frequency.get(num, 0) + 1
 
         # Step 2: Check if there is any element with a count of 1
-        if any(count == 1 for count in frequency.values()):
+        if 1 in frequency.values():
             return -1
 
         # Step 3: Calculate minimum steps for each unique element
