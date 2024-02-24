@@ -1,14 +1,8 @@
-# no more duplicate code 
-# one general function to iterate through list
-def get_names(objects):
-    names = []
-    for obj in objects:
-        name = f"{obj.name.first_name} {obj.name.last_name}"
-        names.append(name)
-    return names
-
 team_members = TeamMember.objects.all()
 managers = Manager.objects.all()
-
-manager_names = get_names(managers)
-team_member_names = get_names(team_members)
+for m in managers:
+        name = f"{m.name.first_name} {m.name.last_name}"
+//reset of the code are the same
+for t in team_members:
+        name = f"{t.member.first_name} {t.member.last_name}"
+//reset of the code are the same
