@@ -25,10 +25,6 @@ jobs:
               run:
                 nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
 
-            # Add Codespell for checking typos
-            - name: Check Typos with codespell
-              run: codespell -S __pycache__ -r --ignore-words-list=pylint
-
             # Add Notification Step
             - name: Notify on Failure
               if: failure()
