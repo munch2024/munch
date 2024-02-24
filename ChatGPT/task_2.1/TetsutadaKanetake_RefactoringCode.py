@@ -1,12 +1,7 @@
-def calculate_sum(num_list):
-    total = 0
-    for num in num_list:
-        total += num
-    return total
+def calculate_sum_and_average(num_list):
+    if not num_list:
+        return 0, 0  # Return 0 for both sum and average if the list is empty
 
-def calculate_average(num_list):
-    total = 0
-    for num in num_list:
-        total += num
+    total = sum(num_list)
     average = total / len(num_list)
-    return average
+    return total, average
