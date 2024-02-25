@@ -4,6 +4,13 @@ import pandas as pd
 independent = pd.DataFrame(np.random.random((3, 3)))
 dependent = pd.DataFrame(np.random.random((3, 1)))
 
-b = pd.DataFrame(np.linalg.inv((independent.T) @ independent), independent.columns, independent.columns) @ independent.T @ dependent
+# Linear regression coefficient vector equation:
+# b = (X^T * X)^-1 * X^T * y
+
+# Perform least squares regression
+coefficients, residuals, _, _ = np.linalg.lstsq(independent, dependent, rcond=None)
+
+# Create a DataFrame to store the coefficients
+b = pd.DataFrame(coefficients, index=independent.columns, columns=['Coefficient'])
 
 print(b)
