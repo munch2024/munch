@@ -1,14 +1,17 @@
 from typing import List
-from collections import defaultdict
+import math
 
 
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        frequency = defaultdict(int)
+        frequency = {}
         for num in nums:
-            frequency[num] = 1 + frequency.get(num, 0)
+            frequency[num] = frequency.get(num, 0) + 1
 
-        if sum(frequency.values()) % 3 != 0:
-            return -1
+        ans = 0
+        for value in frequency.values():
+            if value == 1:
+                return -1
+            ans += math.ceil(value / 3)
 
-        return sum(frequency.values()) // 3
+        return ans
