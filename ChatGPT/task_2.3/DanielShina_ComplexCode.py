@@ -1,15 +1,18 @@
-import random, sys
+import random
+import sys
 
-def generate_random_numbers(n):
-    return [random.randint(1, 100) for _ in range(n)]
-
-def filter_odd_numbers(numbers):
-    return [num for num in numbers if num % 2 != 0]
-
-def calculate_square_roots(numbers):
-    return [num ** 0.5 for num in numbers]
+def generate_random_numbers(count):
+    """Generates a list of random numbers."""
+    return [random.randint(1, 100) for _ in range(count)]
 
 def find_prime_numbers(numbers):
+    """
+    Finds prime numbers from a given list.
+    Args:
+        numbers (list): List of numbers to check for primality.
+    Returns:
+        list: List of prime numbers found.
+    """
     prime_numbers = []
     for num in numbers:
         if num > 1:
@@ -24,23 +27,25 @@ def find_prime_numbers(numbers):
 
 def main():
     try:
-        n = int(sys.argv[1])
+        count = int(sys.argv[1])  # Get the number of random numbers from command line argument
     except IndexError:
         print("Please provide the number of random numbers to generate.")
         return
     except ValueError:
         print("Please provide a valid integer.")
         return
-
-    random_numbers = generate_random_numbers(n)
-    odd_numbers = filter_odd_numbers(random_numbers)
-    square_roots = calculate_square_roots(odd_numbers)
-    prime_numbers = find_prime_numbers(square_roots)
-
+    
+    if count <= 0:
+        print("Please provide a positive integer.")
+        return
+    
+    random_numbers = generate_random_numbers(count)  # Generate random numbers
+    
+    prime_numbers = find_prime_numbers(random_numbers)  # Find prime numbers
+    
+    # Print results
     print("Generated Random Numbers:", random_numbers)
-    print("Filtered Odd Numbers:", odd_numbers)
-    print("Square Roots:", square_roots)
-    print("Prime Numbers from Square Roots:", prime_numbers)
+    print("Prime Numbers:", prime_numbers)
 
 if __name__ == "__main__":
     main()
