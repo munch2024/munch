@@ -12,23 +12,22 @@ class Solution:
         dummy = ListNode(0, head)
         
         prev = dummy
-        curr = head
         
-        # while the current and current's next (a pair exists)
-        while curr and curr.next:
-            nextPair = curr.next.next
-            first = curr
-            second = curr.next
+        # While there are at least two more nodes to swap
+        while prev.next and prev.next.next:
+            first = prev.next
+            second = prev.next.next
             
-            # rotate pair
+            # Swap the pair
             prev.next = second
-            first.next = nextPair
+            first.next = second.next
             second.next = first
             
-            # increment 
-            prev = curr
-            curr = nextPair
+            # Move prev two steps forward
+            prev = first
+        
         return dummy.next
+
 
 def main():
     # Create a sample linked list: 1 -> 2 -> 3 -> 4 -> 5
