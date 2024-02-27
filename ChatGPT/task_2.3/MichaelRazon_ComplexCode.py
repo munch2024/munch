@@ -61,19 +61,26 @@ def linearRegress(train_indices,test_indices):
     Xte1 = pd.concat([temp,Xte],axis=1)
 
     Xt = Xtr1.transpose()                       # transposed X, for calculation
-    # Get coefficients with training data
-    b = np.dot(np.dot(np.linalg.inv(np.dot(Xt,Xtr1)),Xt),raw_ytr) # 𝐛 = (𝐗′𝐗)^(-1)𝐗′𝐲
+    # Calculate coefficients using the normal equation
+    inverse_product = np.linalg.inv(np.dot(Xt, Xtr1))
+    # Coefficients (b) are obtained by multiplying the inverse of (X^T * X) with X^T and then with raw_ytr
+    b = np.dot(np.dot(inverse_product, Xt), raw_ytr)
     foldResults.extend(b[1:8])                  # save coefficients to fold results
 
     # Predict y
     yHat = np.dot(Xte1,b)                       # ŷ = Xb
     raw_yte = raw_yte.to_numpy()                # make compatible for matrix operation
     
-    # calculate RMSE
-    rmse = np.sqrt(np.sum(np.square(raw_yte - yHat))/raw_yte.shape[0]) 
+    # Calculate RMSE
+    squared_diff = np.square(raw_yte - yHat)
+    # Mean Squared Error (MSE) is the sum of squared differences divided by the number of samples
+    mse = np.sum(squared_diff) / raw_yte.shape[0]
+    # RMSE is the square root of MSE
+    rmse = np.sqrt(mse)
     foldResults.append(rmse)                    # save RMSE
 
     return foldResults
+    
     
 
 
@@ -87,11 +94,15 @@ kf = KFold(n_splits=10) # K fold splits (10 Fold)
 for train_index, test_index in kf.split(data):
     results.extend(linearRegress(train_index, test_index))
 
-# Format results
-results = np.reshape(results,(10,8))
-results = pd.DataFrame(results,columns=["cylinders","displacement","horsepower","weight","acceleration","model year","origin","RMSE"])
-results = pd.concat([foldLabel,results],axis=1)
-results
+# Format results# Reshape results array and create a DataFrame
+results_shape = (10, 8)
+results_reshaped = np.reshape(results, results_shape)
+# Define column names for the DataFrame
+columns = ["cylinders", "displacement", "horsepower", "weight", "acceleration", "model year", "origin", "RMSE"]
+# Create a DataFrame with reshaped results and appropriate column names
+results_df = pd.DataFrame(results_reshaped, columns=columns)
+results_df
+
 
 
 
