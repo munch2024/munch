@@ -1,20 +1,19 @@
-private Optional<Player> playerWithMost(Predicate<Card> condition) {
+private Optional<Player> playerWithMostCards()
+{
     Player scoringPlayer = null;
     int maxCount = 0;
 
-    for (Player p : players) {
-        int count = 0;
+    for(Player p : players)
+    {
+        final int count = p.pile.size();
 
-        for (Card c : p.pile) {
-            if (condition.test(c)) {
-                count++;
-            }
-        }
-
-        if (count > maxCount) {
+        if(count > maxCount)
+        {
             scoringPlayer = p;
             maxCount = count;
-        } else if (count == maxCount) {
+        }
+        else if(count == maxCount)
+        {
             scoringPlayer = null;
         }
     }
@@ -22,14 +21,64 @@ private Optional<Player> playerWithMost(Predicate<Card> condition) {
     return Optional.ofNullable(scoringPlayer);
 }
 
+private Optional<Player> playerWithMostSevens()
+{
+    Player scoringPlayer = null;
+    int maxCount = 0;
 
-private void updateScores() {
-    for (Player p : players) {
-        p.score = p.scopas;
+    for(Player p : players)
+    {
+        int count = 0;
+
+        for(Card c : p.pile)
+        {
+            if(c.is(Card.Value.SEVEN))
+            {
+                count++;
+            }
+        }
+
+        if(count > maxCount)
+        {
+            scoringPlayer = p;
+            maxCount = count;
+        }
+        else if(count == maxCount)
+        {
+            scoringPlayer = null;
+        }
     }
 
-    playerWithMost(p -> true).ifPresent(p -> p.score += 1); // most cards
-    playerWithMost(c -> c.is(Card.Value.SEVEN)).ifPresent(p -> p.score += 1); // most sevens
-    playerWithMost(c -> c.is(Card.Suit.SPADES)).ifPresent(p -> p.score += 1); // most spades
+    return Optional.ofNullable(scoringPlayer);
+}
 
+private Optional<Player> playerWithMostSpades()
+{
+    Player scoringPlayer = null;
+    int maxCount = 0;
+
+    for(Player p : players)
+    {
+        int count = 0;
+
+        for(Card c : p.pile)
+        {
+            if(c.is(Card.Suit.SPADES))
+            {
+                count++;
+            }
+        }
+
+        if(count > maxCount)
+        {
+            scoringPlayer = p;
+            maxCount = count;
+        }
+        else if(count == maxCount)
+        {
+            scoringPlayer = null;
+        }
+    }
+
+    return Optional.ofNullable(scoringPlayer);
 }
