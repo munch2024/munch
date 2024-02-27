@@ -1,5 +1,4 @@
-import cmath
-
+import main
 def solve_quadratic_equation(a, b, c):
     # Calculate the discriminant
     discriminant = (b ** 2) - (4 * a * c)
