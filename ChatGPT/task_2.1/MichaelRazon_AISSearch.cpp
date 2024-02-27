@@ -5,6 +5,7 @@
 #include <sstream>
 #include <string>
 #include <cmath>
+#include <algorithm>
 
 using namespace std;
 
@@ -33,11 +34,9 @@ struct AISType
 // Prototypes for functions
 void readFile( ifstream & inFile, vector<AISType> &item, int& count);
 bool openInputFile( ifstream & inFile );
-string makeStringUpper( string s);
 int searchForVesselByName( vector<AISType> & dataBase,  string vesselName,
                     vector<string> & s );
 void printRecord( AISType & item );
-bool getNextField(string &line, int &index, string &subString);
 double stringConvert(string);
 int findLastOccurrance(string mmsi, vector<AISType> &d);
 int findFirstOccurrance(string mmsi, vector<AISType> &d);
@@ -85,29 +84,28 @@ int main()
     // user interaction loop
     do{
 
-        // prompt the user for the input to search for.  q to quit
-        temp.clear();
-        mmsi.clear();
+       temp.clear();
+	mmsi.clear();
 
-        cout << "Enter vessel name: ";
+	cout << "Enter vessel name: ";
+	getline(cin, temp, '\n');
 
-        // read the user input.  getline is used so that spaces may be included
-        // in the input
-        getline(cin, temp, '\n');
+	// Check to see if the user wants to exit the program. 
+	// If not exiting, output the search string.
+	if (temp != "q" or temp == "Q") {
+	    cout << endl << "Searching for records with names containing \"" << temp << "\"" << endl;
+	} else {
+	    return 0;
+	}
 
-        // check to see if the user wants to exit the program. 
-        // If not exiting, output the search string.
-        if ( temp != "q" or temp == "Q" ){
-            cout << endl<< "Searching for records with names containing \"" 
-                 << temp << "\"" << endl;
-        }else
-            return 0;
+	// Convert the vessel name to uppercase before searching
+	transform(temp.begin(), temp.end(), temp.begin(), ::toupper);
 
-        // search for the number of items that contain the name/phrase
-        // All names in the vessel dataBase are upper case, so make the search
-        // string upper.  MMSI is built by the function and contains the vector
-        // of unique vessels that contain the name searched for. 
-        found = searchForVesselByName( dataBase,  makeStringUpper(temp), mmsi );
+	// Search for the number of items that contain the name/phrase
+	// All names in the vessel dataBase are upper case, so make the search
+	// string upper. MMSI is built by the function and contains the vector
+	// of unique vessels that contain the name searched for. 
+	found = searchForVesselByName(dataBase, temp, mmsi);
 
         // Let the user know if any ships were found with the name
         if( found <= 0) {
@@ -276,20 +274,22 @@ int findFirstOccurrance(string mmsi, vector<AISType> &d)
         the vessel count and check if the ship was already found by passing in that vessel's 
         MMSI and checking it against vector<string> s into addUniqueString() function.
 */
-int searchForVesselByName( vector<AISType> & dataBase, string vesselName, vector<string> &s)
-{
+int searchForVesselByName(vector<AISType> &dataBase, string vesselName, vector<string> &s) {
     int size = dataBase.size();
     int numberOfVesselsFound = 0;
-    string temp = makeStringUpper(vesselName); //makes search term in all caps since the vector of vessel names is in all caps
+    
+    // Convert the search string to uppercase
+    string temp = vesselName;
+    transform(temp.begin(), temp.end(), temp.begin(), ::toupper);
 
-    for(int i = 0; i < size; i++){
-        if(dataBase[i].vesselName.find(temp) != string::npos){ //checks if the search term exists in the vessel's vesselName field
-            addUniqueString(s, dataBase[i].MMSI); //checks to see if the vesselName has already been recorded
+    for (int i = 0; i < size; i++) {
+        if (dataBase[i].vesselName.find(temp) != string::npos) {
+            addUniqueString(s, dataBase[i].MMSI);
             numberOfVesselsFound++;
         }
     }
-    return numberOfVesselsFound; 
 
+    return numberOfVesselsFound;
 }
 
 /*  addUniqueString - 
@@ -435,28 +435,37 @@ void readFile( ifstream & inFile, vector<AISType> &item, int& count)
 
     cout << "----------------------" << '\n'; //this line is added to match example output
 
-    while(true){ //exit condition is in body: inFile.eof()
-        getline(inFile, line); //gets the entry of the vessel
-        if(inFile.eof()) //if the end of file is reached, the file is done being read, so break
+     while (true) {
+        getline(inFile, line);
+        if (inFile.eof())
             break;
-        index = 0; 
-        fieldNumber = 0; 
-        for(int i = 0; i < fieldTotal; i++){ 
-            getNextField(line, index, subString); //parse for each value
-            saveField(fieldNumber, subString, tempItem); //send parsed value into the vector
-            fieldNumber++;
-            subString = "";
 
-            // Output the number processed. If the number update stops, then
-            // their may be problem with the program.
-            char eraseLine[]={'\r',27,'[','1','K'};
-            if( (count % 100000 ) == 0){
+        index = 0;
+        fieldNumber = 0;
+
+        for (int i = 0; i < fieldTotal; i++) {
+            string subString = "";
+            while (static_cast<unsigned int>(index) != line.length()) {
+                if (line[index] != ',') {
+                    subString += line[index];
+                    index++;
+                } else {
+                    index++;
+                    break;
+                }
+            }
+
+            saveField(fieldNumber, subString, tempItem);
+            fieldNumber++;
+
+            char eraseLine[] = {'\r', 27, '[', '1', 'K'};
+            if ((count % 100000) == 0) {
                 cout << eraseLine << count;
                 cout.flush();
             }
-
         }
-        item.push_back(tempItem); //send the filled vessel object into the database
+
+        item.push_back(tempItem);
         count++;
     }
    cout << "--- End of file reached ---Items read: " << count << '\n';	//this code had been added to match the example output
@@ -518,63 +527,3 @@ void saveField( int fieldNumber, string subString,  AISType &tempItem ){
 
 }
 
-
-/*  getNextField -
-        Parses through the line of comma separated values for the next value and storing it as a substring
-    parameters - 
-        string &line - line of comma separated values containing data to be put in field members of vessel
-        int &index - tells the function where to look in the line for the value
-        string &subString - holds each character read through until a comma or the line length is found
-    return values - 
-        return the modified index by reference so the next time the function is called, it will know where
-        to start looking in the line. return the subString by reference to be saved into the vessel's record.
-        return false if a comma is found and the line is not done being parsed. return true if the line is 
-        done being parsed.
-    Algorithm - 
-        Use a while-loop to parse through the line. If the character of the current index is not a comma (the 
-        delimiter) and is not the last index of the line, then the character must be part of the current value
-        being read. Concatenate the substring with the character. Otherwise, if the current character is a comma,
-        incremement the index to prepare for the next function call and return false to indicate the line still
-        needs to be parsed. If the end of the line is reached, exit the while-loop and return true to indicate the 
-        line is finished being parsed.
-*/
-bool getNextField(string &line, int &index, string &subString)
-{
-    char delimiter = ','; //because it is a .csv
-
-    while(static_cast<unsigned int>(index) != line.length()){
-        if (line[index] != delimiter){ //if the character isn't a comma, it must be part of the value being parsed
-            subString += line[index];
-            index++;
-
-        } else {
-            index++;
-            return false; //comma found and there is still more to parse out of the line
-        }
-    }
-	return true; //end of line reached
-}
-
-
-
-/*  makeStringUpper - 
-        takes the passed string and converts it so that every alphabetical letter is changed to its uppercase version
-    parameters - 
-        string s - the string to be changed into all capital letters, barring characters that do not have a capital version
-    return value - 
-        return the string in all capital letters
-    Algorithm - 
-        Use a for-loop to parse through the string from the start of the string to the end of it. For every character, use 
-        library function toupper() to attempt to capitalize it to its capital version. Concatenate the result to the temporary
-        string. Once the end of the string has been reached, return the resulting string.
-*/
-string makeStringUpper(string s)
-{
-    string temp;
-
-    for(unsigned int i = 0; i < s.length(); i++){ //go through the entire string
-        temp += toupper(s[i]); //concatenate attempted capitalized character into the temporary string 
-    }
-
-    return temp; //the string with all lowercase letters changed to capital letters 
-}
